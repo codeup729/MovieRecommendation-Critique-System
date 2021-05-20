@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Movie Recommendation System</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Recursive:wght@300;400;500&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+  <!-- Bootstrap -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+  <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='css/style.css') }}">
+
+
+</head>
+
+<body id="content" style="font-family: Recursive, sans-serif;">
+
+	<div class="ml-container" style="display: block;">
+    <br><br><br><br><br><br><br>
+    <center><h1> Movie Recommendation System</h1></center>
+    <br>
+    <div class="form-group shadow-textarea" style="margin-top: 30px;text-align: center;color: white;">
+        <form action="{{ url_for('home') }}" method="POST">
+            <input class="movie form-control" type="text" id="movie_name" name="movie_name" placeholder="Enter a full movie name" style="background-color: #ffffff;border-color:#ffffff;width: 60%;color: #181818" autocomplete="off" required />
+            <br><br><br>
+            <input class="btn btn-primary btn-block movie-button" style="font-size: 1.42rem; background-color: #e50914; text-align: center; border-color: #e50914; width:120px;" type="submit" id="submission_button" value="Submit"/>
+        </form>
+    </div>
+
+	</div>
+    <hr>
+	<a href="{{ url_for('landing') }}">
+	<button class="btn btn-primary btn-block movie-button" style="font-size: 1.42rem; background-color: #e50914; text-align: center; border-color: #e50914; width:120px;" >
+		 Logout
+	</button>
+	</a>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+
+</body>
+</html>

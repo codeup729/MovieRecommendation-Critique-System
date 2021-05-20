@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Intermediate Page</title>
+    <link rel="canonical" href="https://getbootstrap.com/docs/5.0/examples/jumbotron/">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Recursive:wght@300;400;500&display=swap" rel="stylesheet">
+    <link href="{{ url_for('static',filename='css/intermed/css/bootstrap.min.css') }}" rel="stylesheet">
+    <link href="{{ url_for('static',filename='css/intermed/css/style.css') }}" rel="stylesheet">
+
+    <style>
+      .bd-placeholder-img {
+        font-size: 1.125rem;
+        text-anchor: middle;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        user-select: none;
+      }
+
+      @media (min-width: 768px) {
+        .bd-placeholder-img-lg {
+          font-size: 3.5rem;
+        }
+      }
+    </style>
+
+    
+  </head>
+  <body>
+    
+<main>
+  <div class="container py-4">
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <div class="p-5 mb-4 rounded-3">
+      <div class="container-fluid py-5 text-center">
+        <h1 class="display-5 fw-bold">{{ data[0] }}</h1>
+        <br>
+        <br>
+        <p class="fs-4">{{ data[1] }}</p>
+        <br>
+        <br>
+        {% if data[2] == 'Continue' %}
+          <a href="{{ url_for('home') }}"><button class=" btn btn-{{data[3]}} btn-lg" type="button">{{ data[2] }}</button></a>
+        {% elif data[2] == 'Login Screen' %}
+          <a href="{{ url_for('login', do='login') }}"><button class=" btn btn-{{data[3]}} btn-lg" type="button">{{ data[2] }}</button></a>
+        {% elif data[2] == 'Signup Screen' %}
+          <a href="{{ url_for('login', do='signup') }}"><button class=" btn btn-{{data[3]}} btn-lg" type="button">{{ data[2] }}</button></a>
+        {% endif %}
+      </div>
+    </div>
+  </div>
+</main>
+  </body>
+</html>

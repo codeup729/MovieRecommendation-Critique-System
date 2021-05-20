@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="zxx">
+<!-- Head -->
+
+<head>
+    <title>{{ heading }}</title>
+    <!-- Meta-Tags -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="utf-8">
+    <script>
+        addEventListener("load", function () {
+            setTimeout(hideURLbar, 0);
+        }, false);
+
+        function hideURLbar() {
+            window.scrollTo(0, 1);
+        }
+    </script>
+    <!-- //Meta-Tags -->
+    <!-- Index-Page-CSS -->
+    <link rel="stylesheet" href="{{ url_for('static',filename='css/login/css/style.css') }}" type="text/css" media="all">
+    <!-- //Custom-Stylesheet-Links -->
+    <!--fonts -->
+    <!-- //fonts -->
+    <link rel="stylesheet" href="{{ url_for('static',filename='css/login/css/font-awesome.min.css') }}" type="text/css" media="all">
+    <!-- //Font-Awesome-File-Links -->
+
+	<!-- Google fonts -->
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Recursive:wght@300;400;500&display=swap" rel="stylesheet">
+	<!-- Google fonts -->
+
+</head>
+<!-- //Head -->
+<!-- Body -->
+
+<body>
+<section class="main">
+	<div class="layer">
+		<div class="content-w3ls">
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+			<div class="content-bottom">
+				<form action="{{ url_for('verify', what=what) }}" method="post">
+					<div class="field-group form-floating">
+						<span class="fa fa-user" aria-hidden="true"></span>
+						<div class="wthree-field">
+							<input style="font-size: 1.2rem; font-weight: 500" name="username" id="text1" type="text" value="" placeholder="Username" required>
+						</div>
+					</div>
+					<div class="field-group">
+						<span class="fa fa-lock" aria-hidden="true"></span>
+						<div class="wthree-field">
+							<input style="font-size: 1.2rem; font-weight: 500" name="password" id="myInput" type="Password" placeholder="Password">
+						</div>
+					</div>
+					<div class="wthree-field">
+						<button style="font-size: 1.42rem;" type="submit" class="btn">{{ heading }}</button>
+					</div>
+				</form>
+			</div>
+		</div>
+
+    </div>
+</section>
+</body>
+<!-- //Body -->
+</html>

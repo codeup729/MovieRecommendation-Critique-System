@@ -1,0 +1,148 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+	<title>Movie Recommendation</title>
+	<link href="{{ url_for('static',filename='css/lnding/css/bootstrap.css') }}" rel='stylesheet' type='text/css' />
+
+	<script src="{{ url_for('static',filename='css/lnding/js/jquery.min.js') }}"></script>
+
+	<link href="{{ url_for('static',filename='css/lnding/css/style.css') }}" rel='stylesheet' type='text/css' />
+
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<script type="application/x-javascript">
+		addEventListener("load", function() {
+			setTimeout(hideURLbar, 0);
+		}, false);
+
+		function hideURLbar() {
+			window.scrollTo(0, 1);
+		}
+	</script>
+	</script>
+
+	<script type="text/javascript" src="{{ url_for('static',filename='css/lnding/js/move-top.js') }}"></script>
+	<script type="text/javascript" src="{{ url_for('static',filename='css/lnding/js/easing.js') }}"></script>
+	<script type="text/javascript">
+		jQuery(document).ready(function($) {
+			$(".scroll").click(function(event) {
+				event.preventDefault();
+				$('html,body').animate({
+					scrollTop: $(this.hash).offset().top
+				}, 1000);
+			});
+		});
+	</script>
+
+
+<!--	<link href='http://fonts.googleapis.com/css?family=Lato:300,400,700,900,300italic,400italic,700italic|Open+Sans:300italic,600italic,400,300,600,700' rel='stylesheet' type='text/css'>-->
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+	<link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&family=Recursive:wght@300;400;500&display=swap" rel="stylesheet">
+
+	<script>
+		$(function() {
+			var pull = $('#pull');
+			menu = $('nav ul');
+			menuHeight = menu.height();
+			$(pull).on('click', function(e) {
+				e.preventDefault();
+				menu.slideToggle();
+			});
+			$(window).resize(function() {
+				var w = $(window).width();
+				if (w > 320 && menu.is(':hidden')) {
+					menu.removeAttr('style');
+				}
+			});
+		});
+	</script>
+</head>
+
+<body>
+	<div class="main-header">
+		<div id="home" class="header">
+			<div class="top-header">
+				<div class="container">
+					<div class="logo">
+
+					</div>
+
+					<div class="clearfix"> </div>
+				</div>
+			</div>
+		</div>
+		<script src="js/responsiveslides.min.js"></script>
+		<script>
+			$(function() {
+				$("#slider4").responsiveSlides({
+					auto: true,
+					pager: true,
+					nav: true,
+					speed: 500,
+					namespace: "callbacks",
+					before: function() {
+						$('.events').append("<li>before event fired.</li>");
+					},
+					after: function() {
+						$('.events').append("<li>after event fired.</li>");
+					}
+				});
+			});
+		</script>
+		<div id="top" class="callbacks_container">
+			<div class="tittle-head">
+				<h1>Get Movies Now</h1>
+				<p>Just for you :) </p>
+				<div class="learn-button">
+					<a class="slide-btn" href="{{ url_for('login', do='signup') }}" style="font-size: 1.42rem; font-weight: 500;">Sign Up</a>
+					<a class="slide-btn" href="{{ url_for('login', do='login') }}" style="font-size: 1.42rem; font-weight: 500;">Log In</a>
+				</div>
+			</div>
+		</div>
+		<div class="clearfix"> </div>
+	</div>
+
+	<div id="about" class="about">
+		<div class="container">
+			<div class="about-head">
+				<h3>About</h3>
+				<span>Who we are?</span>
+				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas sit amet lectus congue
+					mi viverra congue in sed leo. Nullam magna nisl, hendrerit non urna et, eleifend pulvinar
+					augue. Suspendisse lacinia molestie ipsum ac semper. Lorem ipsum dolor sit amet,
+					consectetur adipiscing elit. Praesent vel scelerisque purus.</p>
+			</div>
+		</div>
+
+	</div>
+
+	<div class="footer">
+		<div class="container">
+			<div class="copy-right">
+				<p>&copy; 2021 All Rights Reserved </p>
+			</div>
+			<div class="clearfix"> </div>
+		</div>
+	</div>
+
+	<script type="text/javascript">
+		$(document).ready(function() {
+			/*
+										var defaults = {
+								  			containerID: 'toTop', // fading element id
+											containerHoverID: 'toTopHover', // fading element hover id
+											scrollSpeed: 1200,
+											easingType: 'linear'
+								 		};
+										*/
+
+			$().UItoTop({
+				easingType: 'easeOutQuart'
+			});
+
+		});
+	</script>
+
+</body>
+
+</html>
