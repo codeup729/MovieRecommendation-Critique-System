@@ -9,8 +9,8 @@ from pprint import pprint
 
 
 
-TMDB_API_KEY = '7a6f6a890df3e553f8aaf75ec5cf078e'
-RAPIDAPI_KEY ='cf61825fe6mshaa7ecf5fa25b75bp1c5a42jsn373bd69cfeb3'
+TMDB_API_KEY = 'YOUR_API_KEY'
+RAPIDAPI_KEY ='YOUR_API_KEY'
 
 app = Flask(__name__)
 
